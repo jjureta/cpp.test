@@ -6,6 +6,8 @@
 //  Copyright © 2016 Josip Jureta. All rights reserved.
 //
 
+//#include "stdafx.h"
+
 #include <iostream>
 #include <memory>
 
