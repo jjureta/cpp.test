@@ -8,6 +8,6 @@
 #ifndef TEST_PTR_HPP_
 #define TEST_PTR_HPP_
 
-void test_auto_ptr();
+void test_ptr();
 
 #endif /* TEST_PTR_HPP_ */

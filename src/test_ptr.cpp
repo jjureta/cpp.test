@@ -4,13 +4,14 @@
  *  Created on: 2016-06-15
  *      Author: j_jur_000
  */
+#include "stdafx.h"
 
 #include <iostream>
 #include <memory>
 #include <vector>
 
-#include "test_case.hpp"
-#include "a.hpp"
+#include "../include/test_case.hpp"
+#include "../include/a.hpp"
 
 using namespace std;
 
@@ -158,5 +159,10 @@ void test_shared_ptr() {
 	}
 }
 
+void test_ptr() {
+	test_auto_ptr();
 
+	test_unique_ptr();
 
+	test_shared_ptr();
+}

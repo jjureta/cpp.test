@@ -6,12 +6,13 @@
 //  Copyright © 2016 Josip Jureta. All rights reserved.
 //
 
-//#include "stdafx.h"
+#include "stdafx.h"
 
 #include <iostream>
 #include <memory>
 
-#include "test_ptr.hpp"
+#include "../include/test_ptr.hpp"
+#include "../include/test_case.hpp"
 
 class A {
 public:
@@ -83,30 +84,42 @@ public:
     }
 };
 
+void test_virtual() {
+	{
+		test_case t1("derived class pointor");
+		{
+			std::unique_ptr<BA> pb(new BA);
+		}
+	}
+
+	{
+		test_case t1("base class pointor");
+		{
+			std::unique_ptr<A> pa(new BA);
+		}
+	}
+
+	{
+		Z z;
+
+		// error: multiple base classes
+		// z.say_hi();
+	}
+
+	std::cout << "-------------------------------------------" << std::endl;
+	{
+		// error: ambiguos conversion from derived class Z to base class A
+		// std::unique_ptr<A> pa(new Z);
+	}
+
+	std::cout << "-------------------------------------------" << std::endl;
+	{
+		std::unique_ptr<X> pa(new Z);
+	}
+}
+
 int main(int argc, const char * argv[]) {
-    
-    {
-        std::unique_ptr<BA> pb(new BA);
-        std::unique_ptr<A> pa(new BA);
-    }
-    
-    {
-        Z z;
-        
-        // error: multiple base classes
-        // z.say_hi();
-    }
-    
-    std::cout << "-------------------------------------------" << std::endl;
-    {
-        // error: ambiguos conversion from derived class Z to base class A
-        // std::unique_ptr<A> pa(new Z);
-    }
-    
-    std::cout << "-------------------------------------------" << std::endl;
-    {
-        std::unique_ptr<X> pa(new Z);
-    }
-    
+	test_ptr();
+
     return 0;
 }
