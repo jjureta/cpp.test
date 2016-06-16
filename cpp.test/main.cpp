@@ -211,9 +211,5 @@ int main(int argc, const char * argv[]) {
 
 	test_virtual();
 
-#if __cplusplus >= 201203L
-123sdf
-#endif
-
 	return 0;
 }
