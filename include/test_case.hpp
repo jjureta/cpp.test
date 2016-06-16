@@ -17,6 +17,10 @@ public:
 		std::cout << "Start test case: " << test_case_name << std::endl;
 	}
 
+	test_case(const char* tn) : test_case_name(std::string(tn)) {
+		std::cout << "Start test case: " << test_case_name << std::endl;
+	}
+
 	~test_case() {
 		std::cout << "End test case: " << test_case_name << std::endl;
 	}
