@@ -190,15 +190,19 @@ void test_virtual() {
 		}
 	}
 
-	std::cout << "-------------------------------------------" << std::endl;
 	{
-		// error: ambiguos conversion from derived class NonVirtualBase to base class NonVirtualBase1
-		// std::unique_ptr<NonVirtualBase1> pa(new NonVirtualBase);
+		test_case t1("cast to base with non virtual inheritance");
+		{
+			// error: ambiguos conversion from derived class NonVirtualBase to base class BaseVirtualDestructor
+			// std::unique_ptr<BaseVirtualDestructor> pa(new NonVirtualBase);
+		}
 	}
 
-	std::cout << "-------------------------------------------" << std::endl;
 	{
-		std::unique_ptr<VirtualBase1> pa(new VirtualBase);
+		test_case t1("cast to base with virtual inheritance");
+		{
+			std::unique_ptr<BaseVirtualDestructor> pa(new VirtualBase);
+		}
 	}
 }
 
