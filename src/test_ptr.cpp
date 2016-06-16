@@ -4,7 +4,7 @@
  *  Created on: 2016-06-15
  *      Author: j_jur_000
  */
-#include "stdafx.h"
+//#include "stdafx.h"
 
 #include <iostream>
 #include <memory>
