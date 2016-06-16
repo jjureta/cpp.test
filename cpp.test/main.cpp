@@ -11,7 +11,7 @@
 #include <iostream>
 #include <memory>
 
-#include "test_case.hpp"
+#include "test_ptr.hpp"
 
 class A {
 public:

@@ -23,8 +23,9 @@
 							<tool id="org.eclipse.cdt.msvc.cl.exe.debug.104410901" name="C++ Compiler (cl)" superClass="org.eclipse.cdt.msvc.cl.exe.debug">
 								<option id="org.eclipse.cdt.msvc.cl.option.optimization.23715572" name="Optimization" superClass="org.eclipse.cdt.msvc.cl.option.optimization" value="org.eclipse.cdt.msvc.cl.option.optimization.default" valueType="enumerated"/>
 								<option id="org.eclipse.cdt.msvc.cl.option.debugFormat.479957469" name="Debug Information Format" superClass="org.eclipse.cdt.msvc.cl.option.debugFormat" value="org.eclipse.cdt.msvc.cl.option.debugFormat.complete" valueType="enumerated"/>
-								<option id="org.eclipse.cdt.msvc.cl.option.includes.2132557986" superClass="org.eclipse.cdt.msvc.cl.option.includes" valueType="includePath">
+								<option id="org.eclipse.cdt.msvc.cl.option.includes.2132557986" name="Include Path (/I)" superClass="org.eclipse.cdt.msvc.cl.option.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/cpp.test/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/cpp.test/src}&quot;"/>
 								</option>
 								<inputType id="org.eclipse.cdt.msvc.cl.inputType.1080969087" superClass="org.eclipse.cdt.msvc.cl.inputType"/>
 							</tool>
