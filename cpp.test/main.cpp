@@ -6,10 +6,11 @@
 //  Copyright © 2016 Josip Jureta. All rights reserved.
 //
 
-#include "stdafx.h"
+//#include "stdafx.h"
 
 #include <iostream>
 #include <memory>
+//#include <bits/unique_ptr.h>
 
 #include "../include/test_ptr.hpp"
 #include "../include/test_case.hpp"
@@ -142,7 +143,7 @@ public:
 
 void test_virtual() {
 	{
-		test_case t1("dlete derived class pointer");
+		test_case t1("delete derived class pointer");
 		{
 			std::unique_ptr<Derived> pb(new Derived);
 		}
@@ -210,6 +211,10 @@ int main(int argc, const char * argv[]) {
 	//test_ptr();
 
 	test_virtual();
+
+#if __cplusplus >= 201203L
+123sdf
+#endif
 
 	return 0;
 }

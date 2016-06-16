@@ -4,7 +4,7 @@
  *  Created on: 2016-06-15
  *      Author: j_jur_000
  */
-#include "stdafx.h"
+//#include "stdafx.h"
 
 #include <iostream>
 #include <memory>
@@ -131,8 +131,8 @@ void test_shared_ptr() {
 				shared_ptr<A> pta( new A);
 				shared_ptr<A> ptb = pta;
 
-				cout << "pta: " << pta.get() << endl;
-				cout << "ptb: " << ptb.get() << endl;
+				//cout << "pta: " << pta.get() << endl;
+				//cout << "ptb: " << ptb.get() << endl;
 			}
 		}
 
@@ -141,7 +141,7 @@ void test_shared_ptr() {
 			{
 				shared_ptr<A> pta( new A);
 				call_by_value(pta);
-				cout << "pta: " << pta.get() << endl;
+				//cout << "pta: " << pta.get() << endl;
 			}
 		}
 
@@ -153,7 +153,7 @@ void test_shared_ptr() {
 				v.push_back(pta);
 
 
-				cout << "pta: " << pta.get() << endl;
+				//cout << "pta: " << pta.get() << endl;
 			}
 		}
 	}
