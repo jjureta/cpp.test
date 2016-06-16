@@ -22,7 +22,7 @@ public:
 	}
 
 	~test_case() {
-		std::cout << "End test case: " << test_case_name << std::endl;
+		std::cout << "End test case: " << test_case_name << std::endl << std::endl;
 	}
 
 private:
